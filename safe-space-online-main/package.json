@@ -4,18 +4,17 @@
   "version": "1.0.0",
   "description": "Safe Space - Backend API",
   "type": "module",
-  "main": "server.js",
+  "main": "backend/dist/server.js",
   "engines": {
     "node": ">=16.0.0",
     "npm": ">=8.0.0"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "node backend/dist/server.js",
     "build": "cd backend && npm install && npm run build",
     "dev": "cd backend && npm run dev",
     "lint": "eslint .",
-    "format": "prettier --write .",
-    "railway": "npm run build && npm start"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
