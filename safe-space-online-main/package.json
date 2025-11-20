@@ -2,18 +2,14 @@
   "name": "vite_react_shadcn_ts",
   "private": true,
   "version": "0.0.0",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "build": "cd backend && npm run build",
-    "backend:start": "cd backend && npm start",
-    "backend:dev": "cd backend && npm run dev",
-    "dev": "vite",
-    "build:dev": "vite build --mode development",
-    "frontend:build": "vite build",
+    "dev": "cd backend && npm run dev",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "vercel-build": "vite build"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
