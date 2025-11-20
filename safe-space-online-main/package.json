@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "server.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,7 +11,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "vercel-build": "vite build",
-    "start": "cd backend && npm run build && npm start"
+    "start": "node server.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
