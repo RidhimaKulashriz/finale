@@ -11,7 +11,8 @@
     "lint": "eslint . --ext .ts",
     "format": "prettier --write .",
     "prepare": "[ -d .git ] && husky install || echo 'Skipping husky install (not a git repository)'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "clean": "rimraf dist"
   },
   "keywords": [
     "mental-health",                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            

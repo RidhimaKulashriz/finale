@@ -8,8 +8,8 @@ import process from 'process';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Use port from environment or default to 5001
-const PORT = process.env.PORT || 5001;
+// Use port from environment or default to 3000 for Railway
+const PORT = process.env.PORT || 3000;
 const backendPath = join(__dirname, 'backend');
 
 console.log('🚀 Starting application...');
@@ -20,7 +20,11 @@ console.log('🔨 Building backend...');
 const buildProcess = spawn('npm', ['run', 'build'], {
   cwd: backendPath,
   stdio: 'inherit',
-  shell: true
+  shell: true,
+  env: {
+    ...process.env,
+    NODE_ENV: 'production'
+  }
 });
 
 buildProcess.on('close', (code) => {
@@ -43,8 +47,8 @@ function startBackend() {
     shell: true,
     env: {
       ...process.env,
-      PORT: PORT,
-      NODE_ENV: process.env.NODE_ENV || 'production'
+      PORT: PORT, // Use the same port for backend
+      NODE_ENV: 'production'
     }
   });
 
