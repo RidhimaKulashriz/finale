@@ -4,13 +4,13 @@
   "version": "1.0.0",
   "description": "Safe Space - Backend API",
   "type": "module",
-  "main": "backend/dist/server.js",
+  "main": "index.js",
   "engines": {
     "node": ">=16.0.0",
     "npm": ">=8.0.0"
   },
   "scripts": {
-    "start": "node backend/dist/server.js",
+    "start": "node index.js",
     "build": "cd backend && npm install && npm run build",
     "dev": "cd backend && npm run dev",
     "lint": "eslint .",

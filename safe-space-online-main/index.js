@@ -22,6 +22,17 @@ try {
   console.log('📦 Installing dependencies...');
   execSync('npm install', { stdio: 'inherit' });
   
+  console.log('🏗️  Building the application...');
+  execSync('npm run build', { stdio: 'inherit' });
+  
+  console.log('🚀 Starting the server...');
+  execSync('node dist/server.js', { stdio: 'inherit' });
+} catch (error) {
+  console.error('❌ Failed to start the application:', error.message);
+  process.exit(1);
+}
+  execSync('npm install', { stdio: 'inherit' });
+  
   console.log('🔨 Building the application...');
   execSync('npm run build', { stdio: 'inherit' });
   
