@@ -4,9 +4,10 @@
   "version": "1.0.0",
   "description": "Safe Space - Backend API",
   "type": "module",
-  "main": "server.js",
+  "main": "./index.js",
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
   },
   "scripts": {
     "start": "node server.js",
